@@ -9,19 +9,28 @@ const {
   updateToDoController,
   deleteToDoController,
   deleteCompletedToDosController,
-  errorController
+  errorController,
 } = require("../Controller/toDoController");
 
 router.get("/toDos", getToDosController);
 
-router.post("/create-toDo",body("toDoItem").isString(), validate, createToDoController);
+router.post(
+  "/create-toDo",
+  body("toDoItem").isString(),
+  validate,
+  createToDoController
+);
 
 router.put("/update-toDo", validateId, updateToDoController);
 
 router.delete("/delete-toDo", validateId, deleteToDoController);
 
-router.delete("/delete-completed", validateCompleted, deleteCompletedToDosController);
+router.delete(
+  "/delete-completed",
+  validateCompleted,
+  deleteCompletedToDosController
+);
 
-router.use(errorController)
+router.use(errorController);
 
 module.exports = { router };

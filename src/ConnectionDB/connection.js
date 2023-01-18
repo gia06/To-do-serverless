@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const { logger } = require("../Log/pino");
-require('dotenv').config()
+require("dotenv").config();
 
 mongoose.connect(process.env.MONGO_URI);
 

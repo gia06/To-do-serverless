@@ -35,7 +35,7 @@ const deleteCompletedToDosController = async (req, res) => {
 
 const errorController = (req, res) => {
   res.status(404).json({
-    error: 'Not Found',
+    error: "Not Found",
   });
 };
 
@@ -47,5 +47,5 @@ module.exports = {
   updateToDoController,
   deleteToDoController,
   deleteCompletedToDosController,
-  errorController
+  errorController,
 };

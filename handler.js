@@ -1,6 +1,6 @@
 const serverless = require("serverless-http");
 require("./src/ConnectionDB/connection");
-require('dotenv').config()
+require("dotenv").config();
 const express = require("express");
 const { router } = require("./src/Router/router");
 const cors = require("cors");
