@@ -1,5 +1,7 @@
 const Mongoose = require("mongoose");
 
+Mongoose.set("strictQuery", true);
+
 const { Schema } = Mongoose;
 
 const toDoSchema = new Schema({

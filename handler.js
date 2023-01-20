@@ -10,10 +10,18 @@ const swaggerJsDoc = YAML.load("./swagger/swagger.yaml");
 
 const app = express();
 
+const corsOptions = {
+  origin: "*",
+};
+
+app.use(cors(corsOptions));
+
+app.use(express.json());
+
 app.use("/swagger", swaggerUI.serve, swaggerUI.setup(swaggerJsDoc));
 
-app.use(cors());
-app.use(express.json());
 app.use(router);
+
+app.listen(3000)
 
 module.exports.handler = serverless(app);
