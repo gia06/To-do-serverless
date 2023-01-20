@@ -2,7 +2,9 @@ const mongoose = require("mongoose");
 const { logger } = require("../Log/pino");
 require("dotenv").config();
 
-mongoose.connect(process.env.MONGO_URI);
+mongoose.set("strictQuery", false);
+
+mongoose.connect(process.env.MONGO_URI, { serverSelectionTimeoutMS: 5000 });
 
 const connection = mongoose.connection
   .once("open", () => {

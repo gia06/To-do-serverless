@@ -40,7 +40,7 @@ paths:
     post:
       tags: 
         - To-do Items
-      summary: Create To-do item
+      summary: Creates To-do item
       requestBody:
         required: true
         content:
@@ -79,7 +79,7 @@ paths:
     put:
       tags: 
         - To-do Items
-      summary: Update To-do item's status
+      summary: Updates To-do item's status
       requestBody:  
         required: true
         content:

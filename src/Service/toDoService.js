@@ -1,7 +1,8 @@
 const { toDoModel } = require("../Schema/toDoSchema");
 
 const getToDos = async () => {
-  return (toDos = await toDoModel.find());
+  console.log(toDoModel)
+  return await toDoModel.find(); 
 };
 
 const getTodoById = async ({ id }) => {
