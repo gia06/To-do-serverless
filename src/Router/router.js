@@ -17,6 +17,7 @@ router.get("/toDos", getToDosController);
 router.post(
   "/create-toDo",
   body("toDoItem").isString(),
+  body("itemStatus").isString(),
   validate,
   createToDoController
 );

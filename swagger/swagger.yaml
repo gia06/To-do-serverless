@@ -49,10 +49,14 @@ paths:
               type: object
               required:
                 - "toDoItem"
+                - "itemStatus"
               properties:
                 toDoItem:
                   type: string
                   example: Go for a swim at the weekend
+                itemStatus: 
+                  type: string
+                  example: active
       responses: 
         201:
           description: Creates new To-do item successfully
