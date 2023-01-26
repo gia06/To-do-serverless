@@ -1,8 +1,8 @@
 const { toDoModel } = require("../Schema/toDoSchema");
 
 const getToDos = async () => {
-  console.log(toDoModel)
-  return await toDoModel.find(); 
+  console.log(toDoModel);
+  return await toDoModel.find();
 };
 
 const getTodoById = async ({ id }) => {
@@ -13,10 +13,10 @@ const getCompletedToDos = async () => {
   return await toDoModel.find({ itemStatus: "completed" });
 };
 
-const createTodo = async ({ toDoItem }) => {
+const createTodo = async ({ toDoItem, itemStatus }) => {
   toDoModel.create({
     toDoItem: toDoItem,
-    itemStatus: "active",
+    itemStatus: itemStatus,
     isDeleted: false,
   });
 };
