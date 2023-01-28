@@ -22,6 +22,7 @@ app.use("/swagger", swaggerUI.serve, swaggerUI.setup(swaggerJsDoc));
 
 app.use(router);
 
-app.listen(3000)
+// * For testing purposes
+app.listen(3000);
 
 module.exports.handler = serverless(app);
