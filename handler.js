@@ -11,7 +11,7 @@ const swaggerJsDoc = YAML.load("./swagger/swagger.yaml");
 const app = express();
 
 const corsOptions = {
-  origin: "*",
+  origin: "https://main.d2uyadv1e38nxu.amplifyapp.com",
 };
 
 app.use(cors(corsOptions));
@@ -23,6 +23,6 @@ app.use("/swagger", swaggerUI.serve, swaggerUI.setup(swaggerJsDoc));
 app.use(router);
 
 // * For testing purposes
-app.listen(3000);
+app.listen(3001);
 
 module.exports.handler = serverless(app);
